@@ -1,0 +1,207 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Register</title>
+{% endblock %}
+
+{% block body %}
+<form method="POST" action="{{ url_for('register') }}" enctype="multipart/form-data">
+    <h3 class="text-danger">{{ msg }}</h3>
+    <h3 class="text-success">{{ msg2 }}</h3>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Student's Name</label>
+        <input
+            type="text"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            name = "sname"
+            required
+        />
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Father's Name</label>
+        <input
+            type="text"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            name = "fname"
+            required
+        />
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Date of Birth</label>
+        <input
+            type="text"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            name = "dob"
+            required
+        />
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Address</label>
+        <input
+            type="text"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            name = "address"
+            required
+        />
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">City</label>
+        <input
+            type="text"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            name = "city"
+            required
+        />
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">State</label>
+        <input
+            type="text"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            name = "state"
+            required
+        />
+    </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input
+      type="email"
+      class="form-control"
+      id="exampleInputEmail1"
+      aria-describedby="emailHelp"
+      placeholder="Enter email"
+      name = "email"
+      required
+    />
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input
+      type="password"
+      class="form-control"
+      id="exampleInputPassword1"
+      placeholder="Password"
+      name = "password"
+      required
+    />
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">10th-School Name</label>
+    <input
+        type="text"
+        class="form-control"
+        id="exampleInputEmail1"
+        aria-describedby="emailHelp"
+        name = "tenthName"
+        required
+    />
+    <div class="form-group">
+        <label for="exampleInputEmail1">10th-Score</label>
+        <input
+            type="number"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            name = "tenthScore"
+            required
+        />
+</div>
+<div class="form-group">
+    <label for="exampleInputEmail1">12th-School Name</label>
+    <input
+        type="text"
+        class="form-control"
+        id="exampleInputEmail1"
+        aria-describedby="emailHelp"
+        name = "twethName"
+        required
+    />
+    <div class="form-group">
+        <label for="exampleInputEmail1">12th-Score</label>
+        <input
+            type="number"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            name = "twethScore"
+            required
+        />
+</div>
+<div class="form-group">
+    <label for="exampleInputEmail1">UG College Name</label>
+    <input
+        type="text"
+        class="form-control"
+        id="exampleInputEmail1"
+        aria-describedby="emailHelp"
+        name = "ugName"
+        required
+    />
+</div>
+<div class="form-group">
+    <label for="exampleInputEmail1">UG Score (GPA out of 10)</label>
+    <input
+        type="number"
+        class="form-control"
+        id="exampleInputEmail1"
+        aria-describedby="emailHelp"
+        name = "ugScore"
+        required
+    />
+</div>
+<div class="form-group">
+    <label for="exampleFormControlFile1">UG College Photo ID</label>
+    <input type="file" class="form-control-file" id="exampleFormControlFile1" name="collegeId" required>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Working (Type 'yes' if you are working)</label>
+    <input
+        type="text"
+        class="form-control"
+        id="exampleInputEmail1"
+        aria-describedby="emailHelp"
+        name = "working"
+        required
+    />
+</div>
+<div class="form-group">
+    <label for="exampleInputEmail1">Company</label>
+    <input
+        type="text"
+        class="form-control"
+        id="exampleInputEmail1"
+        aria-describedby="emailHelp"
+        name = "company"
+        required
+    />
+</div>
+</div>
+</div>
+  <button type="submit" class="btn btn-warning">Register</button>
+  <a href="/" class="btn btn-primary">Login</a>
+</form>
+{% endblock %} {% block footer %}
+<br />
+<br />
+<footer>
+    <p>
+      Developed by:
+      <a href="https://github.com/kalaiselvikandasamy"
+        ><span style="color: white">KALAISELVI.K</span></a
+      >
+    </p>
+    <p>Contact information: <i>kalaiabi.raj01@gmail.com</i></p>
+  </footer>
+{% endblock footer %}

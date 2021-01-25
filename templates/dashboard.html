@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Dashboard</title>
+{% endblock %}
+{% block body %}
+<br>
+<br>
+{% if user %}
+<br>
+<a href="{{ url_for('logout') }}" class="btn btn-primary" style="float: right;">Logout</a>
+<br>
+<br>
+{% endif %}
+<div class="jumbotron">
+{% if user %}
+Application ID: {{ user.id }}<br>
+Student's Name: {{ user.sname }}<br>
+Father's Name:  {{ user.fname }}<br>
+Date of Birth: {{ user.dob }}<br>
+Address: {{ user.address }}<br>
+City: {{ user.city }}<br>
+State: {{ user.state }}<br>
+Email address: {{ user.email }}<br>
+10th-School Name: {{ user.tenthName }}<br>
+10th-Score: {{ user.tenthScore }}<br>
+12th-School Name: {{ user.twethName }}<br>
+12th-Score: {{ user.twethScore }}<br>
+UG College Name: {{ user.ugName }}<br>
+UG Score (GPA out of 10): {{ user.ugScore }}<br>
+College Id : <a href="/download">download</a><br>
+Working: {{ user.working }}<br>
+Company: {{ user.company }}<br>
+<a href="/dashboard/edit" class="btn btn-warning">Edit my Application</a>
+<a href="/dashboard/delete" class="btn btn-danger">Delete my Application</a>
+{% else %}
+<h1>You are not logged in</h1>
+{% endif %}
+</div>
+{% endblock %}

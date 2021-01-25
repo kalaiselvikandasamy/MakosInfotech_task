@@ -1,0 +1,192 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Edit my Application</title>
+{% endblock %}
+
+{% block body %}
+<form method="POST" action="{{ url_for('edit') }}" enctype="multipart/form-data">
+    <h3 class="text-danger">{{ msg }}</h3>
+    <h3 class="text-success">{{ msg2 }}</h3>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Student's Name</label>
+        <input
+            type="text"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            name = "sname"
+            required
+            value="{{ user.sname }}"
+        />
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Father's Name</label>
+        <input
+            type="text"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            name = "fname"
+            required
+            value="{{ user.fname }}"
+        />
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Date of Birth</label>
+        <input
+            type="text"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            name = "dob"
+            required
+            value="{{ user.dob }}"
+        />
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Address</label>
+        <input
+            type="text"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            name = "address"
+            required
+            value="{{ user.address }}"
+        />
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">City</label>
+        <input
+            type="text"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            name = "city"
+            required
+            value="{{ user.city }}"
+        />
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">State</label>
+        <input
+            type="text"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            name = "state"
+            required
+            value="{{ user.state }}"
+        />
+    </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input
+      type="email"
+      class="form-control"
+      id="exampleInputEmail1"
+      aria-describedby="emailHelp"
+      placeholder="Enter email"
+      name = "email"
+      required
+      value="{{ user.email }}"
+    />
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">10th-School Name</label>
+    <input
+        type="text"
+        class="form-control"
+        id="exampleInputEmail1"
+        aria-describedby="emailHelp"
+        name = "tenthName"
+        required
+        value="{{ user.tenthName }}"
+    />
+    <div class="form-group">
+        <label for="exampleInputEmail1">10th-Score</label>
+        <input
+            type="number"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            name = "tenthScore"
+            required
+            value="{{ user.tenthScore }}"
+        />
+</div>
+<div class="form-group">
+    <label for="exampleInputEmail1">12th-School Name</label>
+    <input
+        type="text"
+        class="form-control"
+        id="exampleInputEmail1"
+        aria-describedby="emailHelp"
+        name = "twethName"
+        required
+        value="{{ user.twethName }}"
+    />
+    <div class="form-group">
+        <label for="exampleInputEmail1">12th-Score</label>
+        <input
+            type="number"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            name = "twethScore"
+            required
+            value="{{ user.twethScore }}"
+        />
+</div>
+<div class="form-group">
+    <label for="exampleInputEmail1">UG College Name</label>
+    <input
+        type="text"
+        class="form-control"
+        id="exampleInputEmail1"
+        aria-describedby="emailHelp"
+        name = "ugName"
+        required
+        value="{{ user.ugName }}"
+    />
+</div>
+<div class="form-group">
+    <label for="exampleInputEmail1">UG Score (GPA out of 10)</label>
+    <input
+        type="number"
+        class="form-control"
+        id="exampleInputEmail1"
+        aria-describedby="emailHelp"
+        name = "ugScore"
+        required
+        value="{{ user.ugScore }}"
+    />
+</div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Working (Type 'yes' if you are working)</label>
+    <input
+        type="text"
+        class="form-control"
+        id="exampleInputEmail1"
+        aria-describedby="emailHelp"
+        name = "working"
+        required
+        value="{{ user.working }}"
+    />
+</div>
+<div class="form-group">
+    <label for="exampleInputEmail1">Company</label>
+    <input
+        type="text"
+        class="form-control"
+        id="exampleInputEmail1"
+        aria-describedby="emailHelp"
+        name = "company"
+        required
+        value="{{ user.company }}"
+    />
+</div>
+  <button type="submit" class="btn btn-primary">Update my Application</button>
+</form>
+{% endblock %}
